@@ -1,0 +1,26 @@
+{
+  "name": "sa",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "sa/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "sa:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sa:build:development"
+        },
+        "production": {
+          "buildTarget": "sa:build:production"
+        }
+      }
+    }
+  }
+}

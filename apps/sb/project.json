@@ -1,7 +1,7 @@
 {
-  "name": "my-node",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/my-node/src",
+  "name": "sb",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "sb/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -10,15 +10,15 @@
       "defaultConfiguration": "development",
       "dependsOn": ["build"],
       "options": {
-        "buildTarget": "my-node:build",
+        "buildTarget": "sb:build",
         "runBuildTargetDependencies": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "my-node:build:development"
+          "buildTarget": "sb:build:development"
         },
         "production": {
-          "buildTarget": "my-node:build:production"
+          "buildTarget": "sb:build:production"
         }
       }
     }
